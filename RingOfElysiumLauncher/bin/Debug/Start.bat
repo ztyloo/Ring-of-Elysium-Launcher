@@ -1,0 +1,1 @@
+RingOfElysiumLauncher.exe -garena -token=bKkl -uid=393530436 -language=en -server=login1101

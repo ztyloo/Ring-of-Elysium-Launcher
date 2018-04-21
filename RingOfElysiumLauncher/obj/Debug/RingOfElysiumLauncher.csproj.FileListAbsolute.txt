@@ -33,3 +33,4 @@ c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\o
 c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\App.baml
 c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\Styles\WindowStyle.baml
 c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\Styles\WindowStyle.g.cs
+c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\bin\Debug\Resources\icon.png

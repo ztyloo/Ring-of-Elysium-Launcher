@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RingOfElysiumLauncher"
         mc:Ignorable="d"
-        Title="Ring Of Elysium Launcher" Height="540" Width="960" WindowStartupLocation="CenterScreen" Style="{Binding Mode=OneWay, Source={StaticResource WindowStyle}}" MinWidth="960" MinHeight="540">
+        Title="Ring Of Elysium Launcher" Height="540" Width="960" WindowStartupLocation="CenterScreen" Style="{Binding Mode=OneWay, Source={StaticResource WindowStyle}}" MinWidth="960" MinHeight="540" Icon="pack://siteoforigin:,,,/Resources/icon.png">
+
     <Window.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/BackGround.jpg"/>
     </Window.Background>
