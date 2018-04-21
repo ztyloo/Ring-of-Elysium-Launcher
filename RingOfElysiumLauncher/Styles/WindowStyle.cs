@@ -1,0 +1,29 @@
+﻿using System;
+using System.Windows;
+using System.Windows.Interop;
+
+namespace RingOfElysiumLauncher.Styles {
+
+	internal static class LocalExtensions {
+		public static void ForWindowFromTemplate(this object templateFrameworkElement, Action<Window> action) {
+			Window window = ((FrameworkElement)templateFrameworkElement).TemplatedParent as Window;
+			if (window != null) action(window);
+		}
+
+		public static IntPtr GetWindowHandle(this Window window) {
+			WindowInteropHelper helper = new WindowInteropHelper(window);
+			return helper.Handle;
+		}
+	}
+
+	public partial class WindowStyle {
+
+		void CloseButtonClick(object sender, RoutedEventArgs e) {
+			sender.ForWindowFromTemplate(w => SystemCommands.CloseWindow(w));
+		}
+
+		void MinButtonClick(object sender, RoutedEventArgs e) {
+			sender.ForWindowFromTemplate(w => SystemCommands.MinimizeWindow(w));
+		}
+	}
+}
