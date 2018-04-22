@@ -4,10 +4,10 @@
 
     <Style TargetType="{x:Type Button}" x:Key="CloseButton">
         <Setter Property="Background" Value="Transparent"/>
-            <Setter Property="BorderBrush" Value="{x:Null}"/>
-            <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="White"/>
 
-            <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderThickness" Value="0"/>
 
         <Setter Property="Template">
             <Setter.Value>
@@ -124,7 +124,7 @@
                                     WindowChrome.IsHitTestVisibleInChrome="True"
                                     Click="MinButtonClick"
                                     >
-                                    
+
                                     <Grid>
                                         <Path
                                             Stroke="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}"
@@ -142,7 +142,7 @@
                                     WindowChrome.IsHitTestVisibleInChrome="True"
                                     Click="CloseButtonClick"
                                     >
-                                    
+
                                     <Grid>
                                         <Path
                                             Stroke="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}"
