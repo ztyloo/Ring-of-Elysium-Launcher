@@ -1,9 +1,6 @@
-E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\bin\Release\Resources\Background.png
 E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\bin\Release\RingOfElysiumLauncherInstaller.exe.config
 E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\bin\Release\RingOfElysiumLauncherInstaller.exe
 E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\bin\Release\RingOfElysiumLauncherInstaller.pdb
-E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\bin\Release\Octokit.dll
-E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\bin\Release\Octokit.xml
 E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\obj\Release\RingOfElysiumLauncherInstaller.csprojResolveAssemblyReference.cache
 E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\obj\Release\Styles\WindowStyle.baml
 E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\obj\Release\MainWindow.g.cs
@@ -21,3 +18,6 @@ E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\obj\Release\RingO
 E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\obj\Release\RingOfElysiumLauncherInstaller.csproj.CopyComplete
 E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\obj\Release\RingOfElysiumLauncherInstaller.exe
 E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\obj\Release\RingOfElysiumLauncherInstaller.pdb
+E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\bin\Release\Costura.dll
+E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\bin\Release\Microsoft.CSharp.dll
+E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\bin\Release\Costura.xml
