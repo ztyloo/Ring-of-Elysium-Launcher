@@ -32,8 +32,6 @@ c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\o
 c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\App.baml
 c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\Styles\WindowStyle.baml
 c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\Styles\WindowStyle.g.cs
-C:\Users\ruday\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\bin\Debug\Resources\BackGround.jpg
-C:\Users\ruday\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\bin\Debug\Resources\icon.png
 C:\Users\ruday\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\bin\Debug\RingOfElysiumLauncher.exe.config
 C:\Users\ruday\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\bin\Debug\RingOfElysiumLauncher.exe
 C:\Users\ruday\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\bin\Debug\RingOfElysiumLauncher.pdb
@@ -80,3 +78,5 @@ E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\RingOfElysiumLau
 E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\RingOfElysiumLauncher.csproj.CoreCompileInputs.cache
 E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\RingOfElysiumLauncher.exe
 E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\RingOfElysiumLauncher.pdb
+C:\Users\ruday\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\Styles\SettingsCloseButton.baml
+C:\Users\ruday\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\Styles\SettingsStyle.baml

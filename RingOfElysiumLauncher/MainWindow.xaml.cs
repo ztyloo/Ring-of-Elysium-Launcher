@@ -60,9 +60,10 @@ namespace RingOfElysiumLauncher {
                     launcherSettings.SetValue("Uid", launchParameters.Uid, RegistryValueKind.String);
                     launcherSettings.SetValue("Language", launchParameters.Language, RegistryValueKind.String);
                     launcherSettings.SetValue("Server", launchParameters.Server, RegistryValueKind.String);
-
                 }
             }
+
+            LanguageTexBox.Text = launchParameters.Language;
 
             // Пинг
             PingAsync("203.205.147.187", 1000, 500);
@@ -123,6 +124,11 @@ namespace RingOfElysiumLauncher {
             roeProcessInfo.Arguments = $" -garena -token={launchParameters.Token} -uid={launchParameters.Uid} -language={launchParameters.Language} -server={launchParameters.Server}";
 
             Process.Start(roeProcessInfo);
+        }
+
+        // Обработка изменения языка
+        private void LanguageTexBox_SelectionChanged(object sender, RoutedEventArgs e) {
+            launcherSettings.SetValue("Language", LanguageTexBox.Text, RegistryValueKind.String);
         }
     }
 }
