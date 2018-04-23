@@ -22,14 +22,14 @@
         <Grid Grid.Row="1" Background="#BF000000">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="PlayButton" Content="PLAY" Margin="10" Style="{StaticResource PlayButton}" FontSize="36" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1"/>
+            <Button x:Name="PlayButton" Content="PLAY" Margin="10" Style="{StaticResource PlayButton}" FontSize="36" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1" HorizontalAlignment="Center" MinWidth="280" Click="PlayButton_Click"/>
             <Label x:Name="PingLabel" Content="Ping:" Margin="10" Foreground="White" VerticalContentAlignment="Center" FontSize="16"/>
         </Grid>
         
-        <Grid x:Name="SettingsGrid" HorizontalAlignment="Center" Margin="0" Width="500" VerticalAlignment="Center" Height="350" Background="#BF000000">
+        <Grid x:Name="SettingsGrid" HorizontalAlignment="Center" Margin="0" Width="500" VerticalAlignment="Center" Height="350" Background="#BF000000" Visibility="Collapsed">
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>

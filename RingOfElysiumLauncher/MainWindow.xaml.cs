@@ -1,4 +1,6 @@
-﻿using System.Net.NetworkInformation;
+﻿using System.Diagnostics;
+using System.IO;
+using System.Net.NetworkInformation;
 using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Win32;
@@ -31,6 +33,11 @@ namespace RingOfElysiumLauncher {
             }
 
             launchParameters = new LaunchParameters(args);
+
+            if (launchParameters.IsEmpty()) {
+                PlayButton.IsEnabled = false;
+                PlayButton.Content = "STARTUP THROUNG GARENA";
+            }
 
             // Пинг
             PingAsync("203.205.147.187", 1000, 500);
@@ -77,6 +84,17 @@ namespace RingOfElysiumLauncher {
                 PlayButton.IsEnabled = true;
                 PlayButton.Content = "PLAY";
             }
+        }
+
+        // Запуск игры
+        private void PlayButton_Click(object sender, RoutedEventArgs e) {
+            ProcessStartInfo roeProcessInfo = new ProcessStartInfo();
+            roeProcessInfo.FileName = PathToGame;
+            roeProcessInfo.WorkingDirectory = Path.GetDirectoryName(PathToGame);
+
+            roeProcessInfo.Arguments = $" -garena -token={launchParameters.Token} -uid={launchParameters.Uid} -language=en -server={launchParameters.Server}";
+
+            Process.Start(roeProcessInfo);
         }
     }
 }

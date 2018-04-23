@@ -59,8 +59,14 @@ namespace RingOfElysiumLauncherInstaller {
                 InstallButton.Content = "ERROR";
                 MessageBox.Show(e.Error.Message, "Error");
             } else {
-                File.Move(PathTextBox.Text, Path.GetDirectoryName(PathTextBox.Text) + "/roe_game.exe");
-                File.Move(Path.GetDirectoryName(PathTextBox.Text) + "/DownloadLaucher", PathTextBox.Text);
+
+                if(!File.Exists(Path.GetDirectoryName(PathTextBox.Text) + "\\roe_game.exe")) { 
+                    File.Move(PathTextBox.Text, Path.GetDirectoryName(PathTextBox.Text) + "\\roe_game.exe");
+                } else {
+                    File.Delete(PathTextBox.Text);
+                }
+
+                File.Move(Path.GetDirectoryName(PathTextBox.Text) + "\\DownloadLaucher", PathTextBox.Text);
 
                 // Настройки лаунчера
                 RegistryKey launcherSettings = Registry.CurrentUser.OpenSubKey("RoELauncher", true); 

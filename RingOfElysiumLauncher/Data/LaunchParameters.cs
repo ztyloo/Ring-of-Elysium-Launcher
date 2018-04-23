@@ -4,7 +4,8 @@ namespace RingOfElysiumLauncher.Data {
 
     public class LaunchParameters {
 
-		public string Token { get; }        // Токен
+
+        public string Token { get; }        // Токен
 		public string Uid { get; }          // ID пользователя
 		public string Language { get; }		// Язык
 		public string Server { get; }		// Сервер
@@ -12,20 +13,39 @@ namespace RingOfElysiumLauncher.Data {
 		// Конструктор
 		public LaunchParameters(string[] args) {
 			foreach(string str in args) {
-				Token = GetParameterValue(str, "token");
-				Uid = GetParameterValue(str, "uid");
-				Language = GetParameterValue(str, "language");
-				Server = GetParameterValue(str, "server");
+                if(IsParameter(str, "token"))
+                    Token = GetParameterValue(str, "token");
+
+                else if (IsParameter(str, "uid"))
+                    Uid = GetParameterValue(str, "uid");
+
+                else if(IsParameter(str, "language"))
+                    Language = GetParameterValue(str, "language");
+
+                else if(IsParameter(str, "server"))
+                    Server = GetParameterValue(str, "server");
 			}
-		}
+        }
+
+        bool IsParameter(string str, string name) {
+            if(str.IndexOf($"-{name}=") != -1) return true;
+
+            return false;
+        }
 
 		// Возвращает зачение параметра имеющего тип "-(parameter)=(value)"
 		string GetParameterValue(string str, string name) {
-			if(str.IndexOf($"-{name}=") != -1) {
+			if(IsParameter(str, name)) {
 				return str.Replace($"-{name}=", "");
 			}
 
 			return "";
 		}
+
+        // Проверка на пустоту параметров
+        public bool IsEmpty() {
+            if (Token != null || Uid != null || Language != null || Server != null) return false;
+            return true;
+        }
 	}
 }
