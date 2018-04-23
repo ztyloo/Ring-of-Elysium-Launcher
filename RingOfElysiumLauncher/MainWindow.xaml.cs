@@ -20,9 +20,18 @@ namespace RingOfElysiumLauncher {
         public MainWindow(string[] args) {
 			InitializeComponent();
 
+            launchParameters = new LaunchParameters(args);
+
             // Настройки лаунчера
             launcherSettings = Registry.CurrentUser.OpenSubKey("RoELauncher", true);
             if(launcherSettings == null) {
+                launcherSettings = Registry.CurrentUser.CreateSubKey("RoELauncher", RegistryKeyPermissionCheck.ReadWriteSubTree);
+
+                launcherSettings.SetValue("Token", "", RegistryValueKind.String);
+                launcherSettings.SetValue("Uid", "", RegistryValueKind.String);
+                launcherSettings.SetValue("Language", "", RegistryValueKind.String);
+                launcherSettings.SetValue("Server", "", RegistryValueKind.String);
+
                 PlayButton.IsEnabled = false;
                 PlayButton.Content = "SELECT PATH";
 
@@ -30,13 +39,29 @@ namespace RingOfElysiumLauncher {
                 SettingsButton.IsEnabled = false;
             } else {
                 PathToGame = launcherSettings.GetValue("PathToGame").ToString();
-            }
 
-            launchParameters = new LaunchParameters(args);
+                if (launchParameters.IsEmpty()) {
 
-            if (launchParameters.IsEmpty()) {
-                PlayButton.IsEnabled = false;
-                PlayButton.Content = "STARTUP THROUNG GARENA";
+                    string token = launcherSettings.GetValue("Token").ToString();
+                    string uid = launcherSettings.GetValue("Uid").ToString();
+                    string language = launcherSettings.GetValue("Language").ToString();
+                    string server = launcherSettings.GetValue("Server").ToString();
+                    launchParameters = new LaunchParameters(token, uid, language, server);
+
+                    if (launchParameters.IsEmpty()) {
+                        PlayButton.IsEnabled = false;
+                        PlayButton.Content = "STARTUP THROUNG GARENA";
+                    }
+
+                } else {
+                    if (launchParameters.Language == "th") launchParameters.Language = "en";
+
+                    launcherSettings.SetValue("Token", launchParameters.Token, RegistryValueKind.String);
+                    launcherSettings.SetValue("Uid", launchParameters.Uid, RegistryValueKind.String);
+                    launcherSettings.SetValue("Language", launchParameters.Language, RegistryValueKind.String);
+                    launcherSettings.SetValue("Server", launchParameters.Server, RegistryValueKind.String);
+
+                }
             }
 
             // Пинг
@@ -78,11 +103,14 @@ namespace RingOfElysiumLauncher {
             if (ofd.ShowDialog() == true) {
                 PathToGame = ofd.FileName;
 
-                if (launcherSettings == null) launcherSettings = Registry.CurrentUser.CreateSubKey("RoELauncher", RegistryKeyPermissionCheck.ReadWriteSubTree);
                 launcherSettings.SetValue("PathToGame", ofd.FileName, RegistryValueKind.String);
 
-                PlayButton.IsEnabled = true;
-                PlayButton.Content = "PLAY";
+                if (launchParameters.IsEmpty()) {
+                    PlayButton.Content = "STARTUP THROUNG GARENA";
+                } else {
+                    PlayButton.IsEnabled = true;
+                    PlayButton.Content = "PLAY";
+                }
             }
         }
 
@@ -92,7 +120,7 @@ namespace RingOfElysiumLauncher {
             roeProcessInfo.FileName = PathToGame;
             roeProcessInfo.WorkingDirectory = Path.GetDirectoryName(PathToGame);
 
-            roeProcessInfo.Arguments = $" -garena -token={launchParameters.Token} -uid={launchParameters.Uid} -language=en -server={launchParameters.Server}";
+            roeProcessInfo.Arguments = $" -garena -token={launchParameters.Token} -uid={launchParameters.Uid} -language={launchParameters.Language} -server={launchParameters.Server}";
 
             Process.Start(roeProcessInfo);
         }

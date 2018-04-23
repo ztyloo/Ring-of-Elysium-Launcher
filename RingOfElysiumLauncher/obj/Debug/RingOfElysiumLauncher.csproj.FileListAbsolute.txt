@@ -14,7 +14,6 @@ C:\Users\Archi_3d\source\repos\RingOfElysiumLauncher\RingOfElysiumLauncher\obj\D
 C:\Users\Archi_3d\source\repos\RingOfElysiumLauncher\RingOfElysiumLauncher\obj\Debug\RingOfElysiumLauncher.exe
 C:\Users\Archi_3d\source\repos\RingOfElysiumLauncher\RingOfElysiumLauncher\obj\Debug\RingOfElysiumLauncher.pdb
 C:\Users\Archi_3d\source\repos\RingOfElysiumLauncher\RingOfElysiumLauncher\bin\Debug\Resources\BackGround.jpg
-c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\bin\Debug\Resources\BackGround.jpg
 c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\bin\Debug\RingOfElysiumLauncher.exe.config
 c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\bin\Debug\RingOfElysiumLauncher.exe
 c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\bin\Debug\RingOfElysiumLauncher.pdb
@@ -33,7 +32,6 @@ c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\o
 c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\App.baml
 c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\Styles\WindowStyle.baml
 c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\Styles\WindowStyle.g.cs
-c:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\bin\Debug\Resources\icon.png
 C:\Users\ruday\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\bin\Debug\Resources\BackGround.jpg
 C:\Users\ruday\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\bin\Debug\Resources\icon.png
 C:\Users\ruday\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\bin\Debug\RingOfElysiumLauncher.exe.config

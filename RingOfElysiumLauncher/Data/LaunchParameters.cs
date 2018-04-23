@@ -7,7 +7,7 @@ namespace RingOfElysiumLauncher.Data {
 
         public string Token { get; }        // Токен
 		public string Uid { get; }          // ID пользователя
-		public string Language { get; }		// Язык
+		public string Language { get; set; }		// Язык
 		public string Server { get; }		// Сервер
 
 		// Конструктор
@@ -27,6 +27,13 @@ namespace RingOfElysiumLauncher.Data {
 			}
         }
 
+        public LaunchParameters(string token, string uid, string language, string server) {
+            Token = token;
+            Uid = uid;
+            Language = language;
+            Server = server;
+        }
+
         bool IsParameter(string str, string name) {
             if(str.IndexOf($"-{name}=") != -1) return true;
 
@@ -44,8 +51,10 @@ namespace RingOfElysiumLauncher.Data {
 
         // Проверка на пустоту параметров
         public bool IsEmpty() {
-            if (Token != null || Uid != null || Language != null || Server != null) return false;
-            return true;
+            if (string.IsNullOrEmpty(Token) || string.IsNullOrEmpty(Uid) || string.IsNullOrEmpty(Language) || string.IsNullOrEmpty(Server))
+                return true;
+
+            return false;
         }
 	}
 }
