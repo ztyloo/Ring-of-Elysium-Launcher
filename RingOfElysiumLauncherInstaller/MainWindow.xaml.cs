@@ -40,9 +40,9 @@ namespace RingOfElysiumLauncherInstaller {
         private async void Install() {
             // Получение ссылки на последнюю версию
             var client = new GitHubClient(new ProductHeaderValue("Ring-of-Elysium-Launcher"));
-            var releases = await client.Repository.Release.GetLatest("RoBit666", "Ring-of-Elysium-Launcher");
+            var release = await client.Repository.Release.GetLatest("RoBit666", "Ring-of-Elysium-Launcher");
 
-            foreach(ReleaseAsset ra in releases.Assets) {
+            foreach(ReleaseAsset ra in release.Assets) {
                 if(ra.Name == "RingOfElysiumLauncher.exe") {
 
                     // Создание веб-клиента
@@ -83,6 +83,11 @@ namespace RingOfElysiumLauncherInstaller {
                 RegistryKey launcherSettings = Registry.CurrentUser.OpenSubKey("RoELauncher", true); 
                 if (launcherSettings == null) launcherSettings = Registry.CurrentUser.CreateSubKey("RoELauncher", RegistryKeyPermissionCheck.ReadWriteSubTree);
                 launcherSettings.SetValue("PathToGame", Path.GetDirectoryName(PathTextBox.Text) + "\\roe_game.exe", RegistryValueKind.String);
+
+                launcherSettings.SetValue("Token", "", RegistryValueKind.String);
+                launcherSettings.SetValue("Uid", "", RegistryValueKind.String);
+                launcherSettings.SetValue("Language", "en", RegistryValueKind.String);
+                launcherSettings.SetValue("Server", "", RegistryValueKind.String);
 
                 // Ярлык
                 WshShell shell = new WshShell();
