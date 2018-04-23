@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\obj\Debug\
+C:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\obj\Debug\
 RingOfElysiumLauncherInstaller
 none
 false
 DEBUG;TRACE
-E:\GIT\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\App.xaml
+C:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncherInstaller\App.xaml
 3284064308
 
-101177285285
-16-964561653
+101112216266
+17151339258
 MainWindow.xaml;Styles\SettingsStyle.xaml;Styles\WindowStyle.xaml;
 
-False
+True
 
