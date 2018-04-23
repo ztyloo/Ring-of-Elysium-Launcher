@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RingOfElysiumLauncher"
         mc:Ignorable="d"
-        Title="Ring Of Elysium Launcher" Height="517" Width="900" WindowStartupLocation="CenterScreen" Style="{Binding Mode=OneWay, Source={StaticResource WindowStyle}}" Icon="pack://siteoforigin:,,,/Resources/icon.png" BorderBrush="#99000000">
+        Title="Ring Of Elysium Launcher" Height="517" Width="900" WindowStartupLocation="CenterScreen" Style="{Binding Mode=OneWay, Source={StaticResource WindowStyle}}" Icon="Resources/icon.png" BorderBrush="#99000000">
 
     <Window.Background>
-        <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/BackGround.jpg"/>
+        <ImageBrush ImageSource="Resources/BackGround.jpg"/>
     </Window.Background>
 
     <Grid>

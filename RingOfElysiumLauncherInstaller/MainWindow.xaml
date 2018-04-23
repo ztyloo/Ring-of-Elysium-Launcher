@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RingOfElysiumLauncherInstaller"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Ring of Elysium Launcher installer" Height="173.6" Width="550" Style="{StaticResource WindowStyle}" BorderBrush="#99000000">
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/Background.png" Stretch="None"/>
+    </Window.Background>
     <Grid>
-        
+        <Label HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" Content="PATH TO GAME:"/>
+        <TextBox x:Name="PathTextBox" Height="32" Margin="137,10,45.4,0" TextWrapping="Wrap" VerticalAlignment="Top" Style="{StaticResource TextBox}" IsReadOnly="True"/>
+        <Button x:Name="PathButton" Content="..." HorizontalAlignment="Left" Margin="510,10,0,0" VerticalAlignment="Top" Width="30" Height="32" Style="{StaticResource Button}" Click="PathButton_Click"/>
+        <Button x:Name="InstallButton" Content="SELECT PATH" HorizontalAlignment="Center" Margin="0,0,0,10" VerticalAlignment="Bottom" Width="280" Style="{StaticResource InstallButton}" Foreground="White" Height="55" IsEnabled="False" Click="InstallButton_Click"/>
+
+
     </Grid>
 </Window>

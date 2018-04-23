@@ -4,6 +4,14 @@
              xmlns:local="clr-namespace:RingOfElysiumLauncherInstaller"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        
+        
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/WindowStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Styles/SettingsStyle.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+        
     </Application.Resources>
 </Application>

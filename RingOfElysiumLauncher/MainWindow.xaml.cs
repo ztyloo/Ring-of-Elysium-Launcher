@@ -67,7 +67,7 @@ namespace RingOfElysiumLauncher {
         // Выбор пути к игре
         private void PathButton_Click(object sender, RoutedEventArgs e) {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Ring of Elysium Client | Europa_Client.exe";
+            ofd.Filter = "Ring of Elysium Client | roe_game.exe";
             if (ofd.ShowDialog() == true) {
                 PathToGame = ofd.FileName;
 
