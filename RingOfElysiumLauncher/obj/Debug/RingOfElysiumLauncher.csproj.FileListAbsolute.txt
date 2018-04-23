@@ -56,3 +56,7 @@ C:\Users\ruday\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\o
 C:\Users\ruday\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\RingOfElysiumLauncher.pdb
 C:\Users\ruday\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\Styles\SettingsButton.baml
 C:\Users\ruday\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\Styles\PlayButton.baml
+C:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\Styles\PlayButton.baml
+C:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\Styles\SettingsButton.baml
+C:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\Styles\SettingsCloseButton.baml
+C:\Users\sasha\Documents\GitHub\Ring-of-Elysium-Launcher\RingOfElysiumLauncher\obj\Debug\Styles\SettingsStyle.baml

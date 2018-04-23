@@ -3,7 +3,7 @@
                     xmlns:local="clr-namespace:RingOfElysiumLauncher.Styles">
 
     <Style TargetType="{x:Type Button}" x:Key="PlayButton">
-        <Setter Property="Background" Value="#FF3CFF3C"/>
+        <Setter Property="Background" Value="#FF6BFF6B"/>
         <Setter Property="BorderBrush" Value="{x:Null}"/>
         <Setter Property="Foreground" Value="Black"/>
 
@@ -27,6 +27,10 @@
 
                         <Trigger Property="IsPressed" Value="true">
                             <Setter Property="Background" Value="#FFFFA103" />
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" Value="#FFFF3F3F" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

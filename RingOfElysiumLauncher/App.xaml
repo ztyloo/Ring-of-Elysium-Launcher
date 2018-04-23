@@ -10,7 +10,9 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles/WindowStyle.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="Styles/SettingsButton.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Styles/SettingsCloseButton.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="Styles/PlayButton.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Styles/SettingsStyle.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
         

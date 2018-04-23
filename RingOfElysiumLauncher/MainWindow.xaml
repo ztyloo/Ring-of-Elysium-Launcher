@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RingOfElysiumLauncher"
         mc:Ignorable="d"
-        Title="Ring Of Elysium Launcher" Height="405" Width="705" WindowStartupLocation="CenterScreen" Style="{Binding Mode=OneWay, Source={StaticResource WindowStyle}}" Icon="pack://siteoforigin:,,,/Resources/icon.png">
+        Title="Ring Of Elysium Launcher" Height="517" Width="900" WindowStartupLocation="CenterScreen" Style="{Binding Mode=OneWay, Source={StaticResource WindowStyle}}" Icon="pack://siteoforigin:,,,/Resources/icon.png" BorderBrush="#99000000">
 
     <Window.Background>
         <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/BackGround.jpg"/>
@@ -17,9 +17,9 @@
             <RowDefinition Height="75"/>
         </Grid.RowDefinitions>
 
-        <Button  Margin="0,10,10,0" VerticalAlignment="Top" Style="{StaticResource SettingsButton}" Height="15" HorizontalAlignment="Right" Width="15" Padding="0" HorizontalContentAlignment="Center" d:IsLocked="True"/>
+        <Button x:Name="SettingsButton"  Margin="0,10,10,0" VerticalAlignment="Top" Style="{StaticResource SettingsButton}" Height="15" HorizontalAlignment="Right" Width="15" Padding="0" HorizontalContentAlignment="Center" Click="SettingsButton_Click"/>
 
-        <Grid Grid.Row="1" Background="#BF000000" d:IsLocked="True">
+        <Grid Grid.Row="1" Background="#BF000000">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -28,6 +28,21 @@
             <Button x:Name="PlayButton" Content="PLAY" Margin="10" Style="{StaticResource PlayButton}" FontSize="36" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1"/>
             <Label x:Name="PingLabel" Content="Ping:" Margin="10" Foreground="White" VerticalContentAlignment="Center" FontSize="16"/>
         </Grid>
-        <Grid HorizontalAlignment="Center" Margin="0" Width="400" VerticalAlignment="Center" Height="250" Background="#BF000000"/>
+        
+        <Grid x:Name="SettingsGrid" HorizontalAlignment="Center" Margin="0" Width="500" VerticalAlignment="Center" Height="350" Background="#BF000000">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Rectangle StrokeThickness="2" Margin="0" Fill="#99000000"/>
+            <Button x:Name="CloseSettingsButton" Margin="0,0,10,0" VerticalAlignment="Center" Width="15" HorizontalAlignment="Right" Style="{StaticResource SettingsCloseButton}" Click="CloseSettingsButton_Click"/>
+            <TextBlock HorizontalAlignment="Center" Margin="10,0,0,0" TextWrapping="Wrap" Text="SETTINGS" VerticalAlignment="Center"/>
+            <Grid Margin="0" Grid.Row="1">
+                <Label Content="PATH TO GAME:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+                <TextBox x:Name="PathTextBox" Style="{StaticResource SettingsTextBoxStyle}" Margin="137,10,45,0" VerticalAlignment="Top" IsReadOnly="True" VerticalContentAlignment="Center"/>
+                <Button x:Name="PathButton" Content="..." Margin="0,10,10,0" VerticalAlignment="Top" Height="31" Style="{StaticResource SettingsButtonStyle}" HorizontalAlignment="Right" Width="30" Click="PathButton_Click"/>
+            </Grid>
+        </Grid>
+
     </Grid>
 </Window>
