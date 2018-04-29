@@ -4,6 +4,7 @@ using System.Net.NetworkInformation;
 using System.Threading.Tasks;
 using System.Windows;
 using Microsoft.Win32;
+
 using RingOfElysiumLauncher.Data;
 
 namespace RingOfElysiumLauncher {
@@ -33,7 +34,7 @@ namespace RingOfElysiumLauncher {
                 launcherSettings.SetValue("Server", "", RegistryValueKind.String);
 
                 PlayButton.IsEnabled = false;
-                PlayButton.Content = "SELECT PATH";
+                PlayButton.Content = Properties.Resources.SelectPath;
 
                 SettingsGrid.Visibility = Visibility.Visible;
                 SettingsButton.IsEnabled = false;
@@ -50,7 +51,7 @@ namespace RingOfElysiumLauncher {
 
                     if (launchParameters.IsEmpty()) {
                         PlayButton.IsEnabled = false;
-                        PlayButton.Content = "STARTUP THROUNG GARENA";
+                        PlayButton.Content = Properties.Resources.StartupGarena;
                     }
 
                 } else {
@@ -82,7 +83,7 @@ namespace RingOfElysiumLauncher {
         // Событие получения пинга
         private void PingEvent(object sender, PingCompletedEventArgs e) {
             if (e.Reply.Status == IPStatus.Success)
-                PingLabel.Content = $"Ping: {e.Reply.RoundtripTime}";
+                PingLabel.Content = $"{Properties.Resources.Ping} {e.Reply.RoundtripTime}";
         }
 
         // Настройки
@@ -107,10 +108,10 @@ namespace RingOfElysiumLauncher {
                 launcherSettings.SetValue("PathToGame", ofd.FileName, RegistryValueKind.String);
 
                 if (launchParameters.IsEmpty()) {
-                    PlayButton.Content = "STARTUP THROUNG GARENA";
+                    PlayButton.Content = Properties.Resources.StartupGarena;
                 } else {
                     PlayButton.IsEnabled = true;
-                    PlayButton.Content = "PLAY";
+                    PlayButton.Content = Properties.Resources.Play;
                 }
             }
         }

@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:resx="clr-namespace:RingOfElysiumLauncher.Properties"
         xmlns:local="clr-namespace:RingOfElysiumLauncher"
         mc:Ignorable="d"
         Title="Ring Of Elysium Launcher" Height="517" Width="900" WindowStartupLocation="CenterScreen" Style="{Binding Mode=OneWay, Source={StaticResource WindowStyle}}" Icon="Resources/icon.png" BorderBrush="#99000000">
@@ -25,8 +26,8 @@
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="PlayButton" Content="PLAY" Margin="10" Style="{StaticResource PlayButton}" FontSize="36" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1" HorizontalAlignment="Center" MinWidth="280" Click="PlayButton_Click"/>
-            <Label x:Name="PingLabel" Content="Ping:" Margin="10" Foreground="White" VerticalContentAlignment="Center" FontSize="16"/>
+            <Button x:Name="PlayButton" Content="{x:Static resx:Resources.Play}" Margin="10" Style="{StaticResource PlayButton}" FontSize="36" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Grid.Column="1" HorizontalAlignment="Center" MinWidth="280" Click="PlayButton_Click"/>
+            <Label x:Name="PingLabel" Content="{x:Static resx:Resources.Ping}" Margin="10" Foreground="White" VerticalContentAlignment="Center" FontSize="16"/>
         </Grid>
         
         <Grid x:Name="SettingsGrid" HorizontalAlignment="Center" Margin="0" Width="500" VerticalAlignment="Center" Height="350" Background="#BF000000" Visibility="Collapsed">
@@ -34,15 +35,17 @@
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+            
             <Rectangle StrokeThickness="2" Margin="0" Fill="#99000000"/>
             <Button x:Name="CloseSettingsButton" Margin="0,0,10,0" VerticalAlignment="Center" Width="15" HorizontalAlignment="Right" Style="{StaticResource SettingsCloseButton}" Click="CloseSettingsButton_Click"/>
-            <TextBlock HorizontalAlignment="Center" Margin="10,0,0,0" TextWrapping="Wrap" Text="SETTINGS" VerticalAlignment="Center"/>
+            <TextBlock HorizontalAlignment="Center" Margin="10,0,0,0" TextWrapping="Wrap" Text="{x:Static resx:Resources.Settings}" VerticalAlignment="Center"/>
+            
             <Grid Margin="0" Grid.Row="1">
-                <Label Content="PATH TO GAME:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" HorizontalContentAlignment="Right"/>
+                <Label Content="{x:Static resx:Resources.PathToGame}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White" HorizontalContentAlignment="Right" Width="122"/>
                 <TextBox x:Name="PathTextBox" Style="{StaticResource SettingsTextBoxStyle}" Margin="137,10,45,0" VerticalAlignment="Top" IsReadOnly="True" VerticalContentAlignment="Center"/>
                 <Button x:Name="PathButton" Content="..." Margin="0,10,10,0" VerticalAlignment="Top" Height="31" Style="{StaticResource SettingsButtonStyle}" HorizontalAlignment="Right" Width="30" Click="PathButton_Click"/>
-                
-                <Label Content="LANGUAGE:" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Foreground="White" Width="122" HorizontalContentAlignment="Right"/>
+
+                <Label Content="{x:Static resx:Resources.Language}" HorizontalAlignment="Left" Margin="10,46,0,0" VerticalAlignment="Top" Foreground="White" Width="122" HorizontalContentAlignment="Right"/>
                 <TextBox x:Name="LanguageTexBox" Style="{StaticResource SettingsTextBoxStyle}" Margin="137,46,10,0" VerticalAlignment="Top" VerticalContentAlignment="Center" SelectionChanged="LanguageTexBox_SelectionChanged"/>
             </Grid>
         </Grid>

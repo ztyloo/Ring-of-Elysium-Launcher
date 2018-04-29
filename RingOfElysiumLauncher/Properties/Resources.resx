@@ -124,4 +124,37 @@
   <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>Язык:</value>
+  </data>
+  <data name="PathToGame" xml:space="preserve">
+    <value>Путь к игре:</value>
+  </data>
+  <data name="Ping" xml:space="preserve">
+    <value>Пинг:</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Играть</value>
+  </data>
+  <data name="SelectPath" xml:space="preserve">
+    <value>Укажите путь к игре</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="StartupGarena" xml:space="preserve">
+    <value>Запустите через Garena</value>
+  </data>
+  <data name="Graphics" xml:space="preserve">
+    <value>Грфика:</value>
+  </data>
+  <data name="GraphicsMax" xml:space="preserve">
+    <value>Максимальная</value>
+  </data>
+  <data name="GraphicsMin" xml:space="preserve">
+    <value>Минимальная</value>
+  </data>
+  <data name="GraphicsNormal" xml:space="preserve">
+    <value>Средняя</value>
+  </data>
 </root>
